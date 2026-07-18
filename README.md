@@ -1,173 +1,151 @@
-# Fine-Tuning LLM with Transformers 🚀
+# OpenAI LLM Fine-Tuning - ITI Assistant 🚀
 
-A practical project demonstrating how to fine-tune a Large Language Model (LLM) using modern NLP techniques and Transformer-based architectures.
+A practical project demonstrating how to fine-tune an OpenAI GPT-4o-mini model to create a specialized AI assistant for ITI administrative rules.
 
-The project focuses on adapting a pre-trained language model to a specific dataset to improve its performance on a targeted task.
+The fine-tuned model is trained on custom JSONL data and designed to answer questions related to attendance policies, penalties, and point deduction rules.
 
 ---
 
 ## 📌 Project Overview
 
-Large Language Models (LLMs) are powerful general-purpose models trained on massive datasets.
+This project shows the complete fine-tuning workflow using OpenAI API:
 
-In this project, I fine-tuned a pre-trained LLM to learn domain-specific patterns and generate more accurate responses for a specific use case.
+1. Upload custom training dataset
+2. Create a fine-tuning job
+3. Monitor training progress
+4. Test the fine-tuned model with real queries
 
-The workflow includes:
-
-- Dataset preparation
-- Tokenization
-- Model configuration
-- Fine-tuning process
-- Model evaluation
-- Text generation using the fine-tuned model
+The goal is to transform a general-purpose LLM into a domain-specific assistant.
 
 ---
 
-## 🧠 Technologies Used
+## 🤖 Use Case
 
-- Python
-- PyTorch
-- Hugging Face Transformers
-- Hugging Face Datasets
-- Tokenizers
-- Google Colab / CUDA
-- Large Language Models (LLMs)
-- Natural Language Processing (NLP)
+**ITI Administrative Assistant**
+
+The fine-tuned model can answer questions about:
+
+- Attendance rules
+- Late arrival penalties
+- Absence policies
+- Point deductions
+- Administrative regulations
 
 ---
 
-## 🏗️ Project Architecture
+## 🛠️ Technologies Used
+
+- Node.js
+- JavaScript / TypeScript
+- OpenAI API
+- GPT-4o-mini
+- LLM Fine-Tuning
+- Generative AI
+- JSONL Training Dataset
+- dotenv
+
+---
+
+## 🏗️ Workflow Architecture
 
 ```
-Dataset
-   |
-   ↓
-Data Preprocessing
-   |
-   ↓
-Tokenization
-   |
-   ↓
-Pre-trained LLM
-   |
-   ↓
-Fine-Tuning Process
-   |
-   ↓
+Training Dataset (JSONL)
+          |
+          ↓
+Upload File to OpenAI
+          |
+          ↓
+Create Fine-Tuning Job
+          |
+          ↓
+GPT-4o-mini Fine-Tuning
+          |
+          ↓
 Fine-Tuned Model
-   |
-   ↓
-Inference & Text Generation
+          |
+          ↓
+AI Assistant Testing
 ```
-
----
-
-## ⚙️ Features
-
-✅ Load pre-trained language models  
-✅ Prepare and clean training data  
-✅ Tokenize text using Transformer tokenizers  
-✅ Fine-tune LLM on custom dataset  
-✅ Evaluate model performance  
-✅ Generate responses using the fine-tuned model  
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Fine-Tuning-LLM-with-Transformers
-
-├── notebooks
-│   └── fine_tuning.ipynb
-│
-├── src
-│   ├── train.py
-│   ├── inference.py
-│   └── utils.py
-│
-├── data
-│
-├── models
-│
-├── requirements.txt
+.
+├── index.js
+├── ITI Rules.jsonl
+├── package.json
+├── .env
 └── README.md
 ```
 
 ---
 
-## 🚀 Installation
+## ⚙️ Setup
 
-Clone the repository:
+Clone repository:
 
 ```bash
-git clone https://github.com/yourusername/Fine-Tuning-LLM-with-Transformers.git
+git clone https://github.com/yourusername/OpenAI-LLM-Fine-Tuning-ITI-Assistant.git
 ```
 
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+npm install
+```
+
+Create `.env` file:
+
+```
+OPENAI_API_KEY=your_api_key
 ```
 
 ---
 
-## 🔥 Training
+## 🚀 Run Project
 
-Run the training script:
+Start fine-tuning process:
 
 ```bash
-python src/train.py
+node index.js
 ```
 
-The training process will:
+The script will:
 
-1. Load the dataset
-2. Tokenize the input data
-3. Configure the model
-4. Start fine-tuning
-5. Save the trained model
+- Upload the dataset
+- Create a fine-tuning job
+- Track training status
+- Return the fine-tuned model ID
+- Test the AI assistant
 
 ---
 
-## 💬 Inference
+## 📊 Example
 
-After training, generate responses:
-
-```bash
-python src/inference.py
-```
-
-Example:
+### User:
 
 ```
-Input:
-Explain artificial intelligence
+I arrived late to the lab for the first time.
+Will I lose points?
+```
 
-Output:
-Artificial intelligence is ...
+### AI Assistant:
+
+```
+According to ITI attendance rules...
 ```
 
 ---
 
-## 📊 Results
+## 🎯 Learning Outcomes
 
-The fine-tuned model achieved improved performance on the target dataset by learning domain-specific language patterns.
-
-Evaluation metrics:
-
-- Loss
-- Accuracy (depending on task)
-- Generated response quality
-
----
-
-## 🎯 Future Improvements
-
-- Apply Parameter Efficient Fine-Tuning (PEFT)
-- Use LoRA / QLoRA techniques
-- Train on larger datasets
-- Deploy the model using API services
+- Understanding LLM fine-tuning workflow
+- Working with OpenAI Fine-Tuning API
+- Preparing JSONL training data
+- Building domain-specific AI assistants
+- Integrating LLMs into applications
 
 ---
 
@@ -175,7 +153,4 @@ Evaluation metrics:
 
 Mohamed Lotfy
 
-Junior Full-Stack .NET Developer | Generative AI Engineer
-
-GitHub:
-https://github.com/mohamed00112200
+Generative AI Engineer | Full-Stack Developer
